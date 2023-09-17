@@ -1,0 +1,101 @@
+
+html {
+    scrollbar-color: #3a3a3a #0c0b0e;
+    scroll-behavior: smooth;
+    color:rgb(219, 230, 238);
+    font-family: 'Trebuchet MS', Arial, sans-serif;;
+    /* 
+    stolen from the flexbox website :)
+    
+    --featured-img: linear-gradient(180deg,#fff,#262626);
+    background-image: radial-gradient(50% 50% at top center,rgba(0,0,0,.66),#262626),var(--featured-img); */
+}
+body {
+    margin: 0 15vw;
+    background-color: rgb(175, 160, 130);
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 5vw;
+    margin: 10vh 0;
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+@media (min-width: 600px) {
+    h2 {
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+    }
+}
+.introtab {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 5% 10%;
+    max-width: 25vw;
+}
+.tab {
+    margin: 10vh 0;
+    min-height: 150vh;
+}
+.tabs {
+    min-width: 100%;
+}
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.block {
+    /* background-color: #0c0b0e25;
+    border-radius: 1vw; */
+    margin: 5%;
+    min-width: 25vw;
+    max-width: 50vw;
+    min-height: 5vw;
+    max-height: 50vw;
+    flex: 1 1;  
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    min-width: 90vw;
+    width: 1600px;
+}
+.tabheader {
+    margin: 0;
+}
+.project_image {
+    float:left;
+    border-radius: 1vw;
+    max-width: 100%;
+    width: 400px;
+    margin: 0 12px 0 0;
+}
+.bold {
+    font-size: 24px;
+}
+.small_margin {
+    display:inline-block;
+    margin: 16px 0 16px 0
+}
+.devblog {
+    float:left;
+    width: 50%;
+    margin: 5% 5% 0 5%;
+}
+.features {
+    float:right;
+    max-width: 50%;
+    margin: 5% 5% 0 5%;
+}
+.darker {
+    color:#2b2b2b;
+}
