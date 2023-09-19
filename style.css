@@ -1,9 +1,9 @@
-
+       
 html {
     scrollbar-color: #3a3a3a #0c0b0e;
     scroll-behavior: smooth;
     color:rgb(219, 230, 238);
-    font-family: 'Trebuchet MS', Arial, sans-serif;;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
     /* 
     stolen from the flexbox website :)
     
@@ -98,4 +98,7 @@ h2 {
 }
 .darker {
     color:#2b2b2b;
+}
+#introCanvas {
+    pointer-events: none;
 }
