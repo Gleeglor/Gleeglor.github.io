@@ -1,0 +1,31 @@
+<nav class="navbar sticky-top navbar-expand-lg bg-light">
+    <div class="container-fluid container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                </li>
+            </ul>
+            <script>
+                const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+                const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+                let toggle = false;
+
+                function toggleDetailedView() {
+                    toggle = !toggle;
+
+                    if(toggle) {
+                        $(".detailed-view").removeClass("d-none");
+                    } else {
+                        $(".detailed-view").addClass("d-none");
+                    }
+                }
+            </script>
+            <button class="rounded-5 btn btn-primary" onclick="toggleDetailedView()" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Show more technical information">Enable detailed view</button>
+        </div>
+    </div>
+</nav>
