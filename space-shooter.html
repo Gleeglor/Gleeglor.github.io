@@ -15,9 +15,40 @@
     <div class="bg-dark text-light">
         <div class="container py-5 gy-5">
             <div class="row pb-5">
-                <p id="garrys-mod" class="fs-1 text-center">Space shooter</p>
-                <img src="img/Unavailable.png" class="w-50" alt="An image of the space shooter game.">
-                <p class="fs-5">More information soon...</p>
+                <p id="space-shooter" class="fs-1 text-primary text-center">Space shooter</p>
+                <img src="img/Space shooter start.png" class="h-100 col-sm-12 col-lg-6" alt="An image of the space shooter game.">
+                <p class="fs-4 col-sm-12 col-lg-6">A genre I have seen everywhere, it is one of the most recognizable game genres. They used to be in arcade stores and were extremely popular with people trying to beat the highscore. And even now the genre persists in forms of more extreme variants like the Touhou series or Eschatos. I believe the soundtrack of these games carried a lot in their popularity, because you could jam out while trying to beat the highscore. As a matter of fact, I am actually listening to the Eschatos ost while writing this.</p>
+                <p class="fs-4">After seeing so many of these games I made my own version, which contained the things that I wanted to see from space shooter games. A fully customisable space ship, specifically the weaponry. I started by designing the core of the game, the enemy spaceships which were and still are placeholder squares, the player ship and how everything should work. The tile placement system, the ui for building your spaceship, firing, weapon damage, bullet types etc. Then stitching everything together in a decently coherent manner. I made a menu where you can switch to the build scene, the enemy spawner mechanic/enemy movement patterns, the sliders for enemy health and spawn frequency. After everything was set and done, I was left with the game you see in the gif animations.</p>
+            </div>
+            <div class="row pb-5">
+                <p id="weapon-types" class="fs-3 text-primary">Weapon types</p>
+                <p class="fs-4">My ideas went wild on weapon types, I took inspirations from games that I have played before. I started with the most simple of things, a normal projectile that deals (I believe) 10 damage upon hitting the enemy. However this was not enough, I wanted to do something bigger.</p>
+                <ul class="ps-5 fs-4">
+                    <li>The explosive projectile.
+                        <p class="fs-4">I made an explosive projectile that deals damage in a radius.</p>
+                    </li>
+                    <li>Frag grenade.
+                        <p class="fs-4">Deals explosive damage in a radius, and shoots out 15 tiny projectiles in a radius, each dealing 1 damage.</p>
+                    </li>
+                    <li>Forcefield.
+                        <p class="fs-4">Deals a moderate amount of damage to every enemy in its radius and stays for about 5 seconds.</p>
+                    </li>
+                    <li>Laser beam.
+                        <p class="fs-4">The endgame weapon which deals high damage to everything that comes in contact with it, but has a long cooldown.</p>
+                    </li>
+                </ul>
+                <p class="fs-4">Note that every weapon does cost ingame currency (bottom left), however in the version I built I have given you 10 billion. So you should not run out of money soon, if you somehow do, thats no problem. Enemies give money, and they give more based around their health.</p>
+            </div>
+            <div class="row pb-5">
+                <p id="more-features" class="fs-3 text-primary">More features</p>
+                <p class="fs-4">What would I have added to the game if I could add more. One of the things I was thinking about was destructable tiles, the enemies shoot projectiles and would be able to slowly destroy your ship bit by bit. In the ship editor you would be able to repair your ship and all the tiles with the money you have earned from shooting the enemies. This would add more difficulty, because what if you dont have enough money to repair your ship, the only option would be to sell some of your parts and climb back up again. This is the reason why there is a hull block in the game, even though it does nothing at all.</p>
+                <p class="fs-4">Another feature would be a power generation system, every weapon can shoot forever with the only downside being the cooldown. So a power system would take up space, give you a vulnerable spot on your ship and adds another layer to weaponry, having more power could give your weapons extra damage or firerate for example.</p>
+                <p class="fs-4">And for the game to be coherent, I wanted to add a story/campaign for the game where you would travel the universe in a linear story. Something like time travel being taboo and the player having traveled back in time for something could make for a fun story. Maybe even having an open world mode could already expand replayability, different events or areas giving you some kind of improvement to your ship, finding archaic components to expand your ship even more. There is so much potential.</p>
+            </div>
+            <div class="row pb-5">
+                <p id="lost-project" class="fs-3 text-primary">Lost project (Bullet hell and Space shooter)</p>
+                <p class="fs-4">Something which I no longer have the source files. They were stored on my laptop from 2017 which is no longer operational. The project was made in Processing 3, an IDE with Java as main programming language. However, I do not see this as a problem but rather an opportunity. Because how would I make this project now with the experience I have gained over the years. I remember that the main brunt of the game was written in the Draw function, which can be seen as the Update function for the game. This should be separated into different update methods for the objects instead of the main Update function. Also I put the input logic of the game in the Draw function, however Processing 3 has dedicated input functions "keyPressed" and "keyReleased" which could improve code readability.</p>
+                <p class="fs-4">I will remake these games eventually, maybe while using something other than processing 3.</p>
             </div>
         </div>
     </div>

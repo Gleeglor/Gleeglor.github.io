@@ -15,9 +15,44 @@
     <div class="bg-dark text-light">
         <div class="container py-5 gy-5">
             <div class="row pb-5">
-                <p id="garrys-mod" class="fs-1 text-center">Derel</p>
-                <img src="img/Unavailable.png" class="w-50" alt="An image of derel.">
-                <p class="fs-5">More information soon...</p>
+                <p id="garrys-mod" class="fs-1 text-primary text-center">Derel</p>
+                <div class="col-sm-12 col-lg-6">
+                    <figure class="figure">
+                        <img src="img/Derel game view.png" class="w-100" alt="An image of derel.">
+                    </figure>
+                </div>
+                <p class="fs-4 col-sm-12 col-lg-6">My new project that I put on a halt as of 2023-10-25 for some other projects and of course this site. Derel, which is the title I am giving this right now is a game about exploring, learning about the world, and gathering resources to protect yourself. The story plays in a medieval-like era with castles, knights, small villages. With fantasy creatures like goblins, monsterous aquatic life and other lifeforms trying to get rid of humans. </p>
+                <p class="fs-4">Your goal depends on what you want to achieve. However it always starts your own camp that you can grow out with optionally complex tower defense aspects. Deal with the evil creatures roaming the lands by exterminating everything in sight. Explore the ruins of civilisations that came before everything. And you could do this with friends, it is always more fun with some friends to do your wood gathering work. The game is going to have a few endings based on the choices you have made.</p>
+                <div class="col-sm-12 col-lg-6 d-flex flex-wrap">
+                    <div>
+                        <p class="fs-4 col-12">The game is in very early stages of development, not even the playable characters have been designed yet. So there is much to do...</p>
+                        <p class="fs-4 col-12">Assets are open source assets which will be replaced in favor of a style I think suits this game.</p>
+                    </div>
+                    <p class="fs-4 col-12">...</p>
+                    <p class="fs-4 col-12">...</p>
+                    <p class="fs-5 col-12">...</p>
+                    <p class="fs-5 align-self-end">The character is not open source...</p>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <figure class="figure col-12">
+                        <img src="img/Derel bridge gate.png" class="w-100 small-image" alt="An image of derel.">
+                        <figcaption>Space gun not included.</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row pb-5">
+                <p id="tower-defense" class="fs-3 text-primary">Tower defense</p>
+                <p class="fs-4">I have not yet truly decided how to make this work yet, but the idea is that every 16x16 or 32x32 tiles is a tilechunk kind of like how minecraft does it. Each tilechunk has certain aspects such as light level, moisture, magical essence and probably a bunch more. Some towers are based around these aspects, such as a solar boiler requiring sunlight, and the more sun there is, the more power it produces. Power can then be used to power other towers to defend your base for example. However, towers inside of a tilechunk can also contribute to the tilechunk specialty <a href="#tilechunk-specialty">explained below</a>.</p>
+                <p class="fs-4">Every tower also has a combination effect, which can improve statistics or do specialised actions. That sounds complex, but for a simple example: Walls have 200 health each, however, for every wall next to another wall the health is multiplied by 2 in the x/y direction they are facing. Meaning a 2x2 array of walls have 400 hp on the left, bottom, right and top. A 3x3 having 800 hp on every side, 4x4 1600 hp etc. Up to 8x8, which would give every wall on every side 25600 hp. This is great if your tower can reach far enough, and can actually shoot over walls that is.</p>
+            </div>
+            <div class="row pb-5">
+                <p id="tilechunk-specialty" class="fs-3 text-primary">Tilechunk specialty</p>
+                <p class="fs-4">This is a mechanic that can improve every single tower inside of a tilechunk, and tilechunks with a high enough specialty can even reach combination effects of their own. Allowing for the creation of a few super structures that can do things that no tower can do. However lets keep it at specialty for now, since super structures are still very much a concept. I have not even designed the playable characters yet... The most simple tile specialty that I can think of is to do with the wall example again.</p>
+                <p class="fs-4">The more you fill an entire tilechunk with walls, the more a specialty will reach certain thesholds. Every theshold gives another buff/specialty/effect to the walls. For example the first threshold could give every single wall a spike, dealing a certain amount of damage to the attacker. The second threshold could give every tower in the tilechunks next to it a range increase. The third making it so every enemy moves slower when in the adjacent tilechunks while improving the previous threshold upgrades.</p>
+            </div>
+            <div class="row pb-5">
+                <p id="world" class="fs-3 text-primary">World</p>
+                <p class="fs-4">The world has a few regions that im going to explain in the future...</p>
             </div>
         </div>
     </div>
