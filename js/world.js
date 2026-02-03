@@ -16,6 +16,8 @@ class World {
         };
     }
 
+    
+
     static update() {
         for (let i = 0; i < Boid.list.length; i++) {
             if (i >= Boid.active_boid_count) {
@@ -80,14 +82,5 @@ class World {
             World.quad_tree.render(ctx);
         }
         ctx.setTransform(1, 0, 0, 1, 0, 0);
-    }
-
-    static setup() {
-        // for(let i = 0; i < World.BOID_SETUP_COUNT; i++) {
-        // }
-    }
-
-    static handle_scroll() {
-        // World.render(Page.ctx);
     }
 }

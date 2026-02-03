@@ -7,7 +7,11 @@ class Page {
     static DEBUG = false;
     static started_intro = false;
 
-    
+
+    static isBoidAreaVisible() {
+        
+    }
+
 
     static get_downscale_factor() {
         const width = window.innerWidth;
@@ -25,13 +29,6 @@ class Page {
     static handle_scroll(evt) {
         Page.scroll.x = window.scrollX || window.pageXOffset;
         Page.scroll.y = window.scrollY || window.pageYOffset;
-
-        // if (Page.started_intro == false) {
-        //     if (Page.boids_box.getBoundingClientRect().y < 300) {
-        //     }
-        // }
-
-        Page.handle_resize();
     }
 
     static handle_resize() {

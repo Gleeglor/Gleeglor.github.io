@@ -27,6 +27,7 @@ class Boid {
         };
     }
 
+
     static handle_phone_tap(event) {
         let x = 0;
         let y = 0;
@@ -203,6 +204,7 @@ class Boid {
     }
 
     update() {
+        
     }
 
     contain(force, size) {
