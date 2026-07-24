@@ -2,47 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1.0, initial-scale=1.0">
-    <title>Rainworld</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rain World: Singularity Bomb - Nick Voorham</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/style.css?vs=8" rel="stylesheet">
     <script src="jquery.js"></script>
     <script src="componentloader.js"></script>
-    <script>$(function () {load("navbar-detailed");})</script>
+    <script>$(function () {load("navbar-project");})</script>
 </head>
-<body>
-    <div class="bg-dark text-light">
-        <div class="container py-5 gy-5">
-            <div class="row pb-5">
-                <p id="garrys-mod" class="fs-1 text-primary text-center">Rainworld</p>
-                <p class="fs-4 col-sm-12 col-lg-6">A dark and unforgiving world, yet amidst the tragedy this game has sparked a sense of beauty in the decaying world of rainworld. This game has in a way become a part of me, and it feels really special to me. From the start of the game till the end, you fight against the ecosystem, and eventually you start to learn how the world works and what role you play.</p>
-                <div class="col-sm-12 col-lg-6">
-                    <figure class="figure">
-                        <img src="gif/Rain world.gif" class="w-100 small-image" alt="A gif of rainworld.">
-                    </figure>
-                </div>
-                <p class="fs-4 col-12">After this realisation you start to become part of the ecosystem instead of fighting against it. Because of this you discover a newfound appreciation for the areas and creatures in rainworld. The game is definitely not for everyone, it is hard and unforgiving for newcomers. It will never back down and you will suffer for a long time before it starts to feel comfortable. But its special to me and many others.</p>
+<body class="project-page text-light">
+    <div class="container py-5">
+        <header class="project-hero text-center">
+            <h1 class="project-title">Rain World: Singularity Bomb</h1>
+            <div class="project-meta">
+                <span class="badge bg-sight-2 rounded-5 px-3 py-2">2023</span>
+                <span class="badge bg-sight-2 rounded-5 px-3 py-2">Official DLC</span>
+                <span class="badge bg-sight-2 rounded-5 px-3 py-2">C#</span>
             </div>
-            <div class="row pb-5">
-                <p id="holograms" class="fs-3 text-primary">Modding the game</p>
-                <p class="fs-4">The game felt so special for me that I wanted to discover what was hidden, not just in the world but in the code. I started digging through the code with an application called "dnspy" and learned how the creator of Rainworld, joar jakobsson, designed his classes and methods. The game is made in C# and I have had some experience with it before, but this solidified my knowledge further. I started playing around with properties, for example a rock, what happens when it hits something? What can I adjust? What happens if I increase the force the rock applies on creatures? With this playing around came the idea, what if I take the explosive force and effect from the bomb in the game and put it on the rock, and what parameters can I tweak to make it interesting?</p>
+            <p class="fs-5 mx-auto" style="max-width: 42rem;">
+                I made the Singularity Bomb and the Cloak for
+                <a href="https://store.steampowered.com/app/1933390/Rain_World_Downpour/" target="_blank" rel="noopener noreferrer">Rain World: Downpour</a>.
+                It started as community work for More Slugcats and ended up in the official DLC when that shipped on January 19, 2023.
+            </p>
+        </header>
+
+        <section class="row align-items-center g-4">
+            <div class="col-lg-6">
+                <h2>Rain World</h2>
+                <p class="fs-5">Rain World is dark and unfair, and somehow still beautiful in that decaying way that sticks with you. You spend a long time fighting the ecosystem before you figure out how it works and what role you play in it. After that it shifts a bit: you stop treating everything as an enemy and start living inside the world instead. It's not for everyone, and newcomers get chewed up for a while, but I got attached anyway.</p>
             </div>
-            <div class="row pb-5">
-                <p id="holograms" class="fs-3 text-primary">The singularity grenade</p>
-                <p class="fs-4">Playing around was fun, after creating an explosion that wipes out every creature on the screen I decided to call it the singularity bomb. But it can not just be throw and boom, it has to have a cool animation and effects. So I ended up with the idea of:</p>
-                <ul class="ps-5 fs-4">
-                    <li>Throw bomb.</li>
-                    <li>Bomb lands.</li>
-                    <li>Bomb flies up a little.</li>
-                    <li>Bomb generates cool effects that get increasingly bigger.</li>
-                    <li>Bomb explodes.</li>
-                    <li>Bomb leaves behind an effect that lasts for a bit.</li>
-                </ul>
-                <p class="fs-4">More to read soon...</p>
+            <div class="col-lg-6">
+                <figure class="figure mb-0 w-100">
+                    <img src="img/Singularity bomb.png" class="w-100 small-image rounded" alt="Slugcat next to a Singularity Bomb">
+                    <figcaption class="figure-caption mt-2">The bomb in-world: dark orb, bright core, those little mycelia tendrils on top.</figcaption>
+                </figure>
             </div>
-        </div>
+        </section>
+
+        <section>
+            <h2>Digging in the code</h2>
+            <p class="fs-5">The game felt special enough that I wanted to see what was hiding under it, not just in the map but in the code. I opened it in dnSpy and started reading how Joar Jakobsson had put the C# together. I'd tweak a rock's impact force, see what happened when it hit something, push numbers until the behaviour felt wrong in an interesting way. At some point I wondered what would happen if I took the explosive bits from a grenade and put them on something stranger. That experiment turned into the singularity bomb.</p>
+        </section>
+
+        <section>
+            <h2>The singularity bomb</h2>
+            <p class="fs-5">A throw-and-instant-boom weapon felt lame after the first few tests. I wanted it to have a little show first:</p>
+            <ul class="fs-5 feature-list ps-4">
+                <li>Throw the bomb</li>
+                <li>It lands, then floats up a bit</li>
+                <li>Effects build: lightning, distortion, things getting pulled in</li>
+                <li>It detonates, and something hangs around afterward</li>
+            </ul>
+            <figure class="figure w-100 my-4 text-center">
+                <img
+                    src="gif/SingularityBombDetonation.gif"
+                    class="small-image rounded media-thumb"
+                    alt="Singularity Bomb detonation from Rain World wiki"
+                >
+                <figcaption class="figure-caption mt-2">Detonation gif from the
+                    <a href="https://rainworld.miraheze.org/wiki/File:SingularityBombDetonation.gif" target="_blank" rel="noopener noreferrer">Rain World Wiki</a>
+                    (click to enlarge).</figcaption>
+            </figure>
+            <p class="fs-5">What shipped is roughly that sequence: a delayed blast of about four seconds, a pull into a kill zone that can take Guardians, stun and knockback for everything else in the room, and visual distortion that hangs around after it stops being lethal. Community work that made it into Downpour. I'm credited for the Singularity Grenade and the Cloak.</p>
+        </section>
+
+        <section>
+            <h2>The Cloak</h2>
+            <p class="fs-5 mb-0">Alongside the bomb I also made the Cloak, a ragged white garment you find in Submerged Superstructure. It's cosmetic while you wear it and doesn't take a hand slot. You can gift it to Looks to the Moon, and she thanks you and puts it on. Quiet little story beat next to a loud weapon, both from the same stretch of digging through the code.</p>
+        </section>
+
+        <p class="back-link">
+            <a href="index.html#projects" class="btn bg-read rounded-5">Back to projects</a>
+        </p>
     </div>
+
+    <script src="lightbox.js?v=2"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>

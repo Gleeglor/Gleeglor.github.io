@@ -2,25 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1.0, initial-scale=1.0">
-    <title>Bullet hell</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undertale-style battle - Nick Voorham</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/style.css?vs=8" rel="stylesheet">
     <script src="jquery.js"></script>
     <script src="componentloader.js"></script>
-    <script>$(function () {load("navbar-detailed");})</script>
+    <script>$(function () {load("navbar-project");})</script>
 </head>
-<body>
-    <div class="bg-dark text-light">
-        <div class="container py-5 gy-5">
-            <div class="row pb-5">
-                <p id="garrys-mod" class="fs-1 text-primary text-center">Bullet hell</p>
-                <img src="img/Unavailable.png" class="w-50" alt="An image of bullet hell.">
-                <p class="fs-4">More to read soon...</p>
+<body class="project-page text-light">
+    <div class="container py-5">
+        <header class="project-hero text-center">
+            <h1 class="project-title">Undertale-style battle clone</h1>
+            <div class="project-meta">
+                <span class="badge bg-sight-2 rounded-5 px-3 py-2">2017</span>
+                <span class="badge bg-sight-2 rounded-5 px-3 py-2">Processing / Java</span>
             </div>
-        </div>
+            <p class="fs-5 mx-auto" style="max-width: 42rem;">
+                A little battle arena inspired by Undertale's soul-box fights: dodge patterned attacks, watch your HP, and try an infinite mode that speeds up the longer you survive.
+            </p>
+        </header>
+
+        <section class="row align-items-center g-4">
+            <div class="col-lg-6 order-lg-2">
+                <figure class="figure mb-0 w-100">
+                    <img src="img/Bullet hell.png" class="w-100 small-image rounded" alt="Spiral bullet pattern in battle box">
+                    <figcaption class="figure-caption mt-2">One of the spiral patterns. Red soul in the box, HP and battle timer up top.</figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <h2>The demo</h2>
+                <p class="fs-5">What I always liked about Undertale combat is that the bullet hell lives inside a small rectangle while the enemy telegraphs patterns above you. I wanted that feeling as its own little game: move the soul, read the pattern, don't get hit.</p>
+                <p class="fs-5 mb-0">I made it in Processing with Java in 2017, around the same time as the space shooter, mostly because I was curious how far I could push readable attack design in a tiny arena.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>What's in it</h2>
+            <ul class="fs-5 feature-list ps-4">
+                <li><strong>Five attack patterns</strong> with different shapes and timings so dodging doesn't get boring too fast</li>
+                <li><strong>UI</strong> for level, HP, battle time, and a few debug readouts I left on while iterating</li>
+                <li><strong>Infinite mode</strong> where the attacks escalate in speed the longer you last</li>
+            </ul>
+            <p class="fs-5 mb-0">The screenshot above is one of those spirals: arms of bullets spinning out from the centre while you try to weave the soul through the gaps.</p>
+        </section>
+
+        <section>
+            <h2>Lost files</h2>
+            <p class="fs-5 mb-0">Same dead 2017 laptop as the space shooter, so the source is gone. Most of the logic sat in draw(), which I'd split into proper updates if I remade it, along with using keyPressed and keyReleased instead of stuffing input into the main loop. Still fun to look back on. Pattern design was the part I cared about most.</p>
+        </section>
+
+        <p class="back-link">
+            <a href="index.html#projects" class="btn bg-read rounded-5">Back to projects</a>
+        </p>
     </div>
+    <script src="lightbox.js?v=2"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
