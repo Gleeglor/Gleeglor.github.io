@@ -347,6 +347,33 @@ body {
     margin-bottom: 1rem;
 }
 
+/* Inline links: Bootstrap blue is muddy on sight greys; match heading accent */
+.project-page a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item) {
+    color: #b7d4ff;
+    text-decoration: underline;
+    text-decoration-color: rgba(183, 212, 255, 0.45);
+    text-underline-offset: 0.18em;
+}
+
+.project-page a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):hover,
+.project-page a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):focus {
+    color: #e4efff;
+    text-decoration-color: rgba(228, 239, 255, 0.85);
+}
+
+.card-text a {
+    color: #d7e8ff;
+    text-decoration: underline;
+    text-decoration-color: rgba(215, 232, 255, 0.5);
+    text-underline-offset: 0.15em;
+}
+
+.card-text a:hover,
+.card-text a:focus {
+    color: #ffffff;
+    text-decoration-color: rgba(255, 255, 255, 0.85);
+}
+
 .project-page .figure-caption {
     color: rgba(255, 255, 255, 0.65);
     font-size: 0.95rem;
