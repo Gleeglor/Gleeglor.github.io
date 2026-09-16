@@ -16,45 +16,106 @@
         <header class="project-hero text-center">
             <h1 class="project-title">Protocol Kardashev</h1>
             <div class="project-meta">
-                <span class="badge bg-sight-2 rounded-5 px-3 py-2">2024</span>
-                <span class="badge bg-sight-2 rounded-5 px-3 py-2">C</span>
-                <span class="badge bg-sight-2 rounded-5 px-3 py-2">Flecs</span>
-                <span class="badge bg-sight-2 rounded-5 px-3 py-2">Paused</span>
+                <span class="badge bg-sight-2 rounded-5 px-3 py-2">2024–2026</span>
+                <span class="badge bg-sight-2 rounded-5 px-3 py-2">Processing / Java</span>
+                <span class="badge bg-sight-2 rounded-5 px-3 py-2">Active</span>
             </div>
             <p class="fs-5 mx-auto" style="max-width: 42rem;">
-                A world prototype about resource management, exponential growth, and leaning into broken game mechanics on purpose. The whole thing sits on the idea of the
-                <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Kardashev_scale">Kardashev scale</a>,
-                which ranks civilisations by how much energy they can harness.
+                A diggable colony sandbox about resource loops, crashed landers, and climbing the
+                <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Kardashev_scale">Kardashev scale</a>
+                — scrape for scraps, then lean into systems that snowball if you push them.
             </p>
         </header>
 
         <section class="row align-items-center g-4">
-            <div class="col-lg-5">
+            <div class="col-lg-6">
                 <figure class="figure mb-0 w-100">
-                    <img src="img/Unavailable.png" class="w-100 small-image rounded" alt="No screenshots yet">
-                    <figcaption class="figure-caption mt-2">No public screenshots yet. The prototype is paused for now.</figcaption>
+                    <img src="img/Protocol Kardashev menu.png" class="w-100 rounded" alt="Protocol Kardashev main menu with solar backdrop and Construction editor">
+                    <figcaption class="figure-caption mt-2">Main menu over a live solar backdrop — New colony, Construction editor, Options.</figcaption>
                 </figure>
             </div>
-            <div class="col-lg-7">
-                <h2>What it's about</h2>
-                <p class="fs-5">The fantasy is starting small and climbing: scrape for scraps, then jump into systems that snowball if you push them hard enough. A lot of the fun is finding the edges of the rules and deciding how far you're willing to exploit them.</p>
-                <p class="fs-5 mb-0">There's a bit of story so the world doesn't feel empty, but it's not a story-driven game. The narrative is mostly there for immersion. The systems are what you're meant to play with.</p>
+            <div class="col-lg-6">
+                <h2>Where it is now</h2>
+                <p class="fs-5">The live game is a 2D Processing sidescroller: diggable crust, soft fog vision, colony HUD, research, and a ship Construction editor. An earlier C / Flecs / Box2D prototype taught me what not to carry forward; this sketchbook build is the one I'm iterating on.</p>
+                <p class="fs-5 mb-0">Dev notes and playtest write-ups live in the
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Gleeglor/space">space</a>
+                    repo (VitePress updates under <code>docs-site/updates/</code>).</p>
             </div>
         </section>
 
         <section>
-            <h2>Stack</h2>
-            <p class="fs-5">I built it in C with Flecs for ECS, plus GLFW, OpenGL, Box2D, and some custom shaders. The point of that stack was practice: data-oriented design, thinking about memory layout, and writing game systems without a heavy engine sitting between me and the metal.</p>
-            <ul class="fs-5 feature-list ps-4 mb-0">
-                <li><strong>Flecs</strong> for the entity-component setup</li>
-                <li><strong>GLFW + OpenGL</strong> for windowing, input, and rendering</li>
-                <li><strong>Box2D</strong> for physics</li>
+            <h2>Recent progress</h2>
+            <p class="fs-5">Pulled from the space changelog and playtest posts (not a wishlist):</p>
+            <ul class="fs-5 feature-list ps-4">
+                <li><strong>Construction editor</strong> — craft-block grid (W×H tiles, 90° rotate, orthogonal connect); multi-select, drag-move, copy/paste; kit palette with cost chips; Reassembly-style attach tint plus mass / HP / thrust / energy stats</li>
+                <li><strong>Designs vs blueprints</strong> — hull Save/Load for vessel and Colony lander designs; separate stamp Blueprints library; trash delete on file-backed rows</li>
+                <li><strong>New colony lander picker</strong> — built-in Colony lander first, then custom saved landers</li>
+                <li><strong>Research / mycelium gate</strong> — Theoretical research tree; Mycelium understanding unlocks Claim land and map expand; early build catalog gated until then</li>
+                <li><strong>Theoretical physics (ore)</strong> — cataloged route for mining / smelting / fabrication (spec-first; live unlock graph still next)</li>
+                <li><strong>Megastructure ladder</strong> — ring slice → orbital ring → interplanetary station → star ring at ×100 scale steps; Construction ring mode stays a schematic mini-grid</li>
+                <li><strong>Colony loop chrome</strong> — crash Initiate boot, circular fog vision, Tile probe, Processes pipelines, Base / Research hologram panels</li>
             </ul>
         </section>
 
         <section>
-            <h2>Status</h2>
-            <p class="fs-5 mb-0">I paused it when adding features under Flecs started costing more than the prototype was worth. It's not thrown away. There's a solid base if I come back with a tighter scope and a clearer path for iterating.</p>
+            <h2>Colony dig + fog</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <figure class="figure mb-0 w-100">
+                        <img src="img/Protocol Kardashev colony.png" class="w-100 rounded" alt="Crashed lander hub under circular fog vision">
+                        <figcaption class="figure-caption mt-2">Crash hub under circular fog — Base / Research and map tools along the bottom.</figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-6">
+                    <figure class="figure mb-0 w-100">
+                        <img src="img/Protocol Kardashev fog.png" class="w-100 rounded" alt="Soft circular fog vision on the colony crust">
+                        <figcaption class="figure-caption mt-2">Soft circular vision mist instead of a hard fog box.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Research + processes</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <figure class="figure mb-0 w-100">
+                        <img src="img/Protocol Kardashev research.png" class="w-100 rounded" alt="Theoretical research panel with Mycelium understanding done">
+                        <figcaption class="figure-caption mt-2">Theoretical research — Mycelium understanding done; unlocks Claim land / Mycelium expand.</figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-6">
+                    <figure class="figure mb-0 w-100">
+                        <img src="img/Protocol Kardashev processes.png" class="w-100 rounded" alt="Processes pipeline graph for scrap to stock">
+                        <figcaption class="figure-caption mt-2">Processes — scrap → invent / scrap processor → storage, with consume/produce chips.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Tile probe</h2>
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <figure class="figure mb-0 w-100">
+                        <img src="img/Protocol Kardashev tile probe.png" class="w-100 rounded" alt="Tile probe overview with materials pie and Build">
+                        <figcaption class="figure-caption mt-2">Tile probe — crust makeup, crash debris, mycelium network in the outliner, Build when research allows.</figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-5">
+                    <p class="fs-5 mb-0">Probe stays fog-gated: outside sight you get refuse, not a free leak of ores and structures. Inside, it's the place you read a pixel and decide what to dig, claim, or build.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Still to shoot</h2>
+            <p class="fs-5 mb-0">The Construction editor is live from the menu (visible above), but I don't have a clean in-canvas screenshot on the site yet — palette, craft-block hull, attach tint / ship stats bar, and Save vs Blueprints. Same for the New colony lander picker sheet. Next pass should grab those from a playtest session.</p>
+        </section>
+
+        <section>
+            <h2>Stack</h2>
+            <p class="fs-5">Current build: <strong>Processing</strong> (Java), custom shaders, Qualia for UI SFX, VitePress docs in-repo. Older prototype: C, Flecs, GLFW, OpenGL, Box2D — paused once Flecs feature cost outran the prototype.</p>
         </section>
 
         <p class="back-link">
