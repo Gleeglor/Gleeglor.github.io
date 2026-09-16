@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Protocol Kardashev is a diggable colony sandbox about climbing the Kardashev scale, from crash fog to custom ships. An early development build.">
     <title>Protocol Kardashev - Nick Voorham</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -16,106 +17,117 @@
         <header class="project-hero text-center">
             <h1 class="project-title">Protocol Kardashev</h1>
             <div class="project-meta">
-                <span class="badge bg-sight-2 rounded-5 px-3 py-2">2024–2026</span>
-                <span class="badge bg-sight-2 rounded-5 px-3 py-2">Processing / Java</span>
-                <span class="badge bg-sight-2 rounded-5 px-3 py-2">Active</span>
+                <span class="badge bg-sight-2 rounded-5 px-3 py-2">2024-2026</span>
+                <span class="badge bg-sight-2 rounded-5 px-3 py-2">Dev build</span>
             </div>
             <p class="fs-5 mx-auto" style="max-width: 42rem;">
-                A diggable colony sandbox about resource loops, crashed landers, and climbing the
+                A diggable colony sandbox about waking up after a crash, scraping a living planet for scrap,
+                and climbing the
                 <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Kardashev_scale">Kardashev scale</a>
-                — scrape for scraps, then lean into systems that snowball if you push them.
+                one hard-won watt at a time. This page covers an early development build: playable, unfinished, and still changing.
             </p>
         </header>
 
         <section class="row align-items-center g-4">
             <div class="col-lg-6">
                 <figure class="figure mb-0 w-100">
-                    <img src="img/Protocol Kardashev menu.png" class="w-100 rounded" alt="Protocol Kardashev main menu with solar backdrop and Construction editor">
-                    <figcaption class="figure-caption mt-2">Main menu over a live solar backdrop — New colony, Construction editor, Options.</figcaption>
+                    <img src="img/Protocol Kardashev menu.png" class="w-100 rounded" alt="Protocol Kardashev main menu with solar system backdrop">
+                    <figcaption class="figure-caption mt-2">The menu hangs over a live solar backdrop. From here you start a colony, open Construction, or dig into Options.</figcaption>
                 </figure>
             </div>
             <div class="col-lg-6">
-                <h2>Where it is now</h2>
-                <p class="fs-5">The live game is a 2D Processing sidescroller: diggable crust, soft fog vision, colony HUD, research, and a ship Construction editor. An earlier C / Flecs / Box2D prototype taught me what not to carry forward; this sketchbook build is the one I'm iterating on.</p>
-                <p class="fs-5 mb-0">Dev notes and playtest write-ups live in the
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Gleeglor/space">space</a>
-                    repo (VitePress updates under <code>docs-site/updates/</code>).</p>
+                <h2>Crash first, ambition later</h2>
+                <p class="fs-5">The fantasy is simple and a little mean. You are not a god with a blank planet. You are a probe that already failed once. Vision is short. Systems are cracked. Scrap sits in the dirt like an argument you have to answer with drones, research, and patience.</p>
+                <p class="fs-5 mb-0">The long promise is the Kardashev ladder: dirt digs become factories, factories become ships, ships become rings and stations that treat planets as parts. The short promise is more intimate. Can you make the next meter of crust useful before the fog eats your confidence?</p>
             </div>
         </section>
 
         <section>
-            <h2>Recent progress</h2>
-            <p class="fs-5">Pulled from the space changelog and playtest posts (not a wishlist):</p>
-            <ul class="fs-5 feature-list ps-4">
-                <li><strong>Construction editor</strong> — craft-block grid (W×H tiles, 90° rotate, orthogonal connect); multi-select, drag-move, copy/paste; kit palette with cost chips; Reassembly-style attach tint plus mass / HP / thrust / energy stats</li>
-                <li><strong>Designs vs blueprints</strong> — hull Save/Load for vessel and Colony lander designs; separate stamp Blueprints library; trash delete on file-backed rows</li>
-                <li><strong>New colony lander picker</strong> — built-in Colony lander first, then custom saved landers</li>
-                <li><strong>Research / mycelium gate</strong> — Theoretical research tree; Mycelium understanding unlocks Claim land and map expand; early build catalog gated until then</li>
-                <li><strong>Theoretical physics (ore)</strong> — cataloged route for mining / smelting / fabrication (spec-first; live unlock graph still next)</li>
-                <li><strong>Megastructure ladder</strong> — ring slice → orbital ring → interplanetary station → star ring at ×100 scale steps; Construction ring mode stays a schematic mini-grid</li>
-                <li><strong>Colony loop chrome</strong> — crash Initiate boot, circular fog vision, Tile probe, Processes pipelines, Base / Research hologram panels</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Colony dig + fog</h2>
-            <div class="row g-4">
+            <h2>A circle of sight in the mist</h2>
+            <p class="fs-5">Colony play starts under soft circular fog. What you have not earned stays unread. Outside the vision dome, the world does not hand you free intel on ores and structures.</p>
+            <div class="row g-4 my-2">
                 <div class="col-lg-6">
                     <figure class="figure mb-0 w-100">
-                        <img src="img/Protocol Kardashev colony.png" class="w-100 rounded" alt="Crashed lander hub under circular fog vision">
-                        <figcaption class="figure-caption mt-2">Crash hub under circular fog — Base / Research and map tools along the bottom.</figcaption>
+                        <img src="img/Protocol Kardashev colony.png" class="w-100 rounded" alt="Crash lander hub under circular fog vision">
+                        <figcaption class="figure-caption mt-2">The crash hub sits in a pale circle of sight while Base and Research wait low on the screen.</figcaption>
                     </figure>
                 </div>
                 <div class="col-lg-6">
                     <figure class="figure mb-0 w-100">
-                        <img src="img/Protocol Kardashev fog.png" class="w-100 rounded" alt="Soft circular fog vision on the colony crust">
-                        <figcaption class="figure-caption mt-2">Soft circular vision mist instead of a hard fog box.</figcaption>
+                        <img src="img/Protocol Kardashev fog.png" class="w-100 rounded" alt="Soft circular fog of war on the colony surface">
+                        <figcaption class="figure-caption mt-2">Mist fades in a circle, not a hard box. Digging and claiming land push that circle outward.</figcaption>
                     </figure>
                 </div>
             </div>
+            <p class="fs-5 mb-0">Tile probe is the close read: stone, ore, debris, empty air. Processes is the wide read: the scrap-to-stock graph that shows whether invent hubs and scrap processors are actually moving material. Both sit as panels you can drag while the planet keeps turning underneath.</p>
         </section>
 
         <section>
-            <h2>Research + processes</h2>
-            <div class="row g-4">
+            <h2>Mycelium before the map opens</h2>
+            <div class="row align-items-center g-4">
                 <div class="col-lg-6">
                     <figure class="figure mb-0 w-100">
-                        <img src="img/Protocol Kardashev research.png" class="w-100 rounded" alt="Theoretical research panel with Mycelium understanding done">
-                        <figcaption class="figure-caption mt-2">Theoretical research — Mycelium understanding done; unlocks Claim land / Mycelium expand.</figcaption>
+                        <img src="img/Protocol Kardashev research.png" class="w-100 rounded" alt="Theoretical research panel showing Mycelium understanding">
+                        <figcaption class="figure-caption mt-2">Theoretical research spends stock up front. Mycelium understanding is the early key that unlocks Claim land.</figcaption>
                     </figure>
                 </div>
                 <div class="col-lg-6">
-                    <figure class="figure mb-0 w-100">
-                        <img src="img/Protocol Kardashev processes.png" class="w-100 rounded" alt="Processes pipeline graph for scrap to stock">
-                        <figcaption class="figure-caption mt-2">Processes — scrap → invent / scrap processor → storage, with consume/produce chips.</figcaption>
-                    </figure>
+                    <p class="fs-5">Early tools stay dark on purpose. Until mycelium makes sense, the growth network stays out of reach and construction without the right drones stays blocked. Research is not flavor text. It is the permission slip for the next layer of the planet.</p>
+                    <p class="fs-5 mb-0">Past that gate, a theoretical physics route sketches ore mining, smelting, and fabrication. Some of that climb already shapes the build catalog. Some of it is still arriving. Either way, the colony is meant to feel gated by understanding, not by a random unlock drip.</p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Tile probe</h2>
+            <h2>Pipelines you can watch</h2>
             <div class="row align-items-center g-4">
                 <div class="col-lg-7">
                     <figure class="figure mb-0 w-100">
-                        <img src="img/Protocol Kardashev tile probe.png" class="w-100 rounded" alt="Tile probe overview with materials pie and Build">
-                        <figcaption class="figure-caption mt-2">Tile probe — crust makeup, crash debris, mycelium network in the outliner, Build when research allows.</figcaption>
+                        <img src="img/Protocol Kardashev processes.png" class="w-100 rounded" alt="Processes pipeline graph for scrap to stock">
+                        <figcaption class="figure-caption mt-2">Processes lays the material graph out in the open: what each stage eats, what it makes, and where you can click next.</figcaption>
                     </figure>
                 </div>
                 <div class="col-lg-5">
-                    <p class="fs-5 mb-0">Probe stays fog-gated: outside sight you get refuse, not a free leak of ores and structures. Inside, it's the place you read a pixel and decide what to dig, claim, or build.</p>
+                    <p class="fs-5 mb-0">If a building is working, the overview should show the work. Buffers, bot use, power draw, and yields belong on the panel you already opened, so the sim never feels like a black box humming behind a static card.</p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Still to shoot</h2>
-            <p class="fs-5 mb-0">The Construction editor is live from the menu (visible above), but I don't have a clean in-canvas screenshot on the site yet — palette, craft-block hull, attach tint / ship stats bar, and Save vs Blueprints. Same for the New colony lander picker sheet. Next pass should grab those from a playtest session.</p>
+            <h2>Ships as craft blocks</h2>
+            <p class="fs-5">Construction turns landers and vessels into assemblies on a grid. Blocks connect, rotate, and carry systems. Hull plates are denser than frames. Thrusters add real push. Ghost placement tints green when a piece can attach and red when it cannot.</p>
+            <div class="row align-items-center g-4 my-2">
+                <div class="col-lg-7">
+                    <figure class="figure mb-0 w-100">
+                        <img src="img/Protocol Kardashev construction.png" class="w-100 rounded" alt="Construction editor with craft-block lander design">
+                        <figcaption class="figure-caption mt-2">The Construction editor: palette on one side, a connected craft on the other, with mass, HP, thrust, and energy in the strip below.</figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-5">
+                    <p class="fs-5 mb-0">You can save full hull designs, or smaller blueprints to reuse later. When a new colony starts, the built-in Colony lander sits at the top of the picker, with custom landers waiting underneath if you have made any.</p>
+                </div>
+            </div>
+            <p class="fs-5 mb-0">Looking farther out, the same ideas stretch toward ring slices, orbital rings, interplanetary stations, and star rings. Each step up that ladder is enormous. The long fantasy stays huge even while the early colony stays small enough to hold in your hands.</p>
         </section>
 
         <section>
-            <h2>Stack</h2>
-            <p class="fs-5">Current build: <strong>Processing</strong> (Java), custom shaders, Qualia for UI SFX, VitePress docs in-repo. Older prototype: C, Flecs, GLFW, OpenGL, Box2D — paused once Flecs feature cost outran the prototype.</p>
+            <h2>Reading a single pixel</h2>
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <figure class="figure mb-0 w-100">
+                        <img src="img/Protocol Kardashev tile probe.png" class="w-100 rounded" alt="Tile probe overview with materials pie chart">
+                        <figcaption class="figure-caption mt-2">Tile probe turns one crust cell into a small brief: makeup, debris, and what you can build once research allows.</figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-5">
+                    <p class="fs-5 mb-0">Inside vision, the probe is where the next dig or build decision happens. Outside vision, it stays quiet on purpose. The map only tells you what your colony has earned the right to know.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Still a workshop</h2>
+            <p class="fs-5 mb-0">This is an early development build. Systems arrive in playable slices while the long climb (from crash site to megastructures) stays the north star. Some routes are already in your hands. Others are still taking shape. Fog, scrap, research, ship building, and a ladder that keeps pointing at the stars.</p>
         </section>
 
         <p class="back-link">
