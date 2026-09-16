@@ -79,7 +79,7 @@ export class Simulation {
     }
 
     #rebuildSpatialIndex() {
-        // Use cached world extents — avoid getBoundingClientRect in the hot path.
+        // Use cached world extents , avoid getBoundingClientRect in the hot path.
         const w = Math.max(this.viewport.worldWidth, this.viewport.documentHeight, 1);
         this.flock.rebuildSpatialIndex({
             width: w,
